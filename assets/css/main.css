@@ -2834,11 +2834,11 @@ input, select, textarea {
 				background-color: #ec8d81;
 			}
 
-			.tiles article:nth-child(6n - 3):before {
+			.tiles article:nth-child(6n - 4):before {
 				background-color: #e7b788;
 			}
 
-			.tiles article:nth-child(6n - 4):before {
+			.tiles article:nth-child(6n - 3):before {
 				background-color: #6fc3df;
 			}
 
