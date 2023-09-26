@@ -39,7 +39,27 @@
 		            font-size: 24px; /* Adjust the icon size */
 		            color: #0077B5; /* LinkedIn blue color */
 		        }
+
+
+			function openPopup() {
+			        // Define the content for the popup 
+			        const popupContent = `
+			            <h2>Popup Content</h2>
+			            <p>This is your custom popup content. You can add text, images, and more.</p>
+			            <button onclick="closePopup()">Close</button>;
 			
+			        // Create a new popup window
+			        const popupWindow = window.open('', 'PopupWindow', 'width=400,height=300');
+			
+			        // Write the content into the popup window
+			        popupWindow.document.body.innerHTML = popupContent;
+			}
+			
+			function closePopup() {
+			        // Close the popup window
+			        window.close();
+			}
+			    
     		</style>
 		
 	</head>
@@ -151,7 +171,7 @@
 									</span>
 									-->
 									<header class="major">
-										<h3><a href="#landing.html" class="link">HP Inc.</a></h3>
+										<h3><a href="javascript:void(0);" onclick="openPopup()">HP Inc.</a></h3>
 										<p>•	Delta Live Tables pipelines (DLT)<br />
 										•	Federated Data Lake system<br />
 										•	Lakehouse architecture<br />
