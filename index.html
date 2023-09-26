@@ -41,31 +41,25 @@
 		        }
 
 
-			let popupWindow;
-
-			    function openPopup() {
-			        // Define the content for the popup 
-			        const popupContent = `
-			            <h2>Popup Content</h2>
-			            <p>This is your custom popup content. You can add text, images, and more.</p>
-			            <button onclick="closePopup()">Close</button>
-			        `;
-			
-			        // Create a new popup window or focus an existing one
-			        if (popupWindow && !popupWindow.closed) {
-			            popupWindow.focus();
-			        } else {
-			            popupWindow = window.open('', 'PopupWindow', 'width=400,height=300');
-			            popupWindow.document.body.innerHTML = popupContent;
-			        }
-			    }
-			
-			    function closePopup() {
-			        // Close the popup window
-			        if (popupWindow && !popupWindow.closed) {
-			            popupWindow.close();
-			        }
-			    }
+			function openPopup() {
+		        // Define the content for the popup 
+		        const popupContent = `
+		            <h2>Popup Content</h2>
+		            <p>This is your custom popup content. You can add text, images, and more.</p>
+		            <button onclick="closePopup()">Close</button>
+		        `;
+		
+		        // Create a new popup window
+		        const popupWindow = window.open('', 'PopupWindow', 'width=400,height=300');
+		
+		        // Write the content into the popup window
+		        popupWindow.document.body.innerHTML = popupContent;
+		    }
+		
+		    function closePopup() {
+		        // Close the popup window
+		        window.close();
+		    }
 
 			    
     		</style>
@@ -189,7 +183,7 @@
 										
 
 										<ul class="actions">
-											<li><a style="padding: 2px 8px;font-size: 10px;" href="javascript:void(0); onclick="openPopup()" class="button">Know More</a></li>
+											<li><a style="padding: 2px 8px;font-size: 10px;" href="javascript:void(0);" onclick="openPopup()" class="button">Know More</a></li>
 										</ul>
 									</header>
 								</article>
